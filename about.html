@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | Organic Store</title>
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <!-- Minimal Custom Theme CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+
+  <!-- SITE HEADER -->
+  <header class="site-header">
+    <nav class="navbar navbar-expand-lg bg-cream py-2 pt-2 pb-3">
+      <!-- container-fluid (full width) ya container (box width) apne hisab se use karein -->
+      <div class="container-fluid px-4 px-lg-5 d-flex align-items-center">
+
+        <!-- 1. LEFT SIDE: LOGO -->
+        <a class="navbar-brand ms-lg-4 me-0 ps-lg-1 pt-lg-2" href="index.html">
+          <img src="organicImage/organic-store-logo5.svg" alt="Organic Store" height="70">
+        </a>
+
+        <!-- MOBILE MENU BUTTON -->
+        <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse"
+          data-bs-target="#mainNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- COLLAPSE MENU -->
+        <div class="collapse navbar-collapse" id="mainNavbar">
+
+          <!-- 2. CENTER: NAVIGATION MENU -->
+          <!-- 'mx-auto' isko center me rakhega. Agar right me khiskana ho to 'ms-auto' kar dena -->
+          <ul class="navbar-nav mx-auto mb-2 pt-lg-3 ps-lg-4 gap-lg-4 text-center ">
+            <li class="nav-item"><a class="nav-link custom-link text-dark" href="about.html">About</a></li>
+            <li class="nav-item"><a class="nav-link custom-link text-dark" href="everything.html">Everything</a></li>
+            <li class="nav-item"><a class="nav-link custom-link text-dark" href="groceries.html">Groceries</a></li>
+            <li class="nav-item"><a class="nav-link custom-link text-dark" href="juice.html">Juice</a></li>
+            <li class="nav-item"><a class="nav-link custom-link text-dark" href="contact.html">Contact</a></li>
+          </ul>
+
+          <!-- 3. RIGHT SIDE: CART + ACCOUNT -->
+          <!-- 'ms-auto' nahi lagaya kyuki ul me 'mx-auto' hai, ye apne aap right me chala jayega -->
+          <div class="d-flex align-items-center justify-content-center gap-4 mt-3 me-lg-4 mt-lg-0">
+
+            <!-- CART -->
+            <a href="#" class="text-decoration-none d-flex align-items-center gap-3 trigger-cart-drawer"
+              style="color: #8bc34a;">
+              <span class="fw-bold header-cart-total">£0.00</span>
+
+              <!-- Bootstrap Badge for Cart -->
+              <div class="position-relative">
+                <i class="bi bi-basket-fill fs-7"></i>
+                <!-- position-absolute top-0 start-100 ye red/green badge ko icon ke upar set karta hai -->
+                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-success cart-badge"
+                  style="font-size: 0.65rem;">
+                  0
+                </span>
+              </div>
+            </a>
+
+
+
+            <!-- ACCOUNT -->
+            <a href="#" class="text-dark">
+              <i class="bi bi-person-fill fs-5"></i>
+            </a>
+
+          </div>
+
+        </div>
+      </div>
+    </nav>
+  </header>
+
+
+
+
+
+
+
+
+  <!-- PAGE HERO BANNER -->
+  <section class="bg-cream py-5 text-center">
+    <div class="container">
+      <h1 class="display-4 fw-bold mb-5 pb-4">About Us</h1>
+      <!-- <img src="homeImage/basil-leaf.png" alt="Basil Leaf" class="img-fluid mx-auto" style="max-width: 160px;"> -->
+    </div>
+  </section>
+
+  <!-- WE ARE YOUR FAVOURITE STORE (Bootstrap Grid) -->
+
+<section class="bg-white py-5">
+  <section class="py-5 position-relative">
+    <!-- LEAF SEPARATOR -->
+    <div class="text-center position-absolute w-100" style="top: -65px; left: 0; z-index: 10;">
+      <img src="homeImage/basil-leaf.png" alt="Leaf Separator" style="max-width: 160px; filter: drop-shadow(0 8px 10px rgba(0,0,0,0.12));">
+    </div>
+        </section>
+    <!-- <div class="container py-3">
+      <div class="row g-4">
+        <div class="col-12 col-md-4">
+
+     <section class="py-5 my-4"> -->
+     <div class="container-fluid" style="padding-left: 6%; padding-right: 6%;">
+      <div class="row align-items-center pb-4 mb-5 g-5">
+        <div class="col-12 col-lg-6">
+          <h2 class="fw-bold mb-3" style="font-size: 35px;">We Are Your Favourite Store.</h2>
+          <p class=" mb-3 pe-lg-5">Tuas quisquam quo gravida proident harum, aptent ligula anim consequuntur, ultrices mauris, nunc voluptates lobortis, varius, potenti placeat! Fuga omnis. Cubilia congue. Recusandae. Vero penatibus quasi! Nostra tenetur dignissimos ultrices natus distinctio ultrices consequuntur numqu.</p>
+          <p class=" mb-5 pe-lg-5">Officiis fuga harum porro et? Similique rhoncus atque! Netus blanditiis provident nunc posuere. Rem sequi, commodo, lorem tellus elit, hic sem tenetur anim amet quas, malesuada proident platea corrupti expedita.</p>
+        </div>
+        <div class="col-12 col-lg-6 text-center">
+          <img src="aboutImage/banner-01.jpg" alt="Organic Farm Vegetables Display" class="img-fluid shadow-sm">
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+
+
+  <!-- NUMBERS SPEAK FOR THEMSELVES (Dark Bootstrap Bar) -->
+
+ <section class="bg-dark-custom text-white py-5">
+    <div class="container-fluid" style="padding-left: 5.5%; padding-right:6% ;">
+      <div class="row g-4 align-items-center text-center text-lg-start">
+        <div class="col-12 col-lg-3">
+          <h3 class="text-white fw-bold m-0 brand-font" style="font-size: 20px;">Numbers Speak For<br>Themselves!</h3>
+        </div>
+        
+        <div class="col-12 col-sm-4 col-lg-3 text-center">
+          <div class="fw-semibold mb-2" style="font-size: 45px; line-height: 1;">5,000+</div>
+          <div style="font-size: 19px;">Curated Products</div>
+        </div>
+
+        <div class="col-12 col-sm-4 col-lg-3 text-center">
+          <div class="fw-semibold mb-2" style="font-size: 45px; line-height: 1;">800+</div>
+          <div style="font-size: 19px;">Curated Products</div>
+        </div>
+
+        <div class="col-12 col-sm-4 col-lg-3 text-center">
+          <div class="fw-semibold mb-2" style="font-size: 45px; line-height: 1;">40+</div>
+          <div style="font-size: 19px;">Product Categories</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+<!-- NUMBERS SPEAK FOR THEMSELVES (Dark Bootstrap Bar) -->
+
+  <!-- <section class="bg-dark-custom text-white py-5">
+    <div class="container">
+      <div class="row g-4 align-items-center text-center text-lg-start">
+        <div class="col-12 col-lg-3">
+          <h3 class="text-white h4 fw-bold m-0">Numbers Speak For Themselves!</h3>
+        </div>
+        <div class="col-12 col-sm-4 col-lg-3 text-center">
+          <div class="display-5 fw-bold brand-font text-white mb-1">5,000+</div>
+          <small class="text-secondary text-uppercase fw-semibold">Curated Products</small>
+        </div>
+        <div class="col-12 col-sm-4 col-lg-3 text-center">
+          <div class="display-5 fw-bold brand-font text-white mb-1">800+</div>
+          <small class="text-secondary text-uppercase fw-semibold">Curated Products</small>
+        </div>
+        <div class="col-12 col-sm-4 col-lg-3 text-center">
+          <div class="display-5 fw-bold brand-font text-white mb-1">40+</div>
+          <small class="text-secondary text-uppercase fw-semibold">Product Categories</small>
+        </div>
+      </div>
+    </div>
+  </section> -->
+
+
+  <!-- CERTIFIED PRODUCTS SECTION -->
+
+  <section class="py-5 mt-4 mb-5 position-relative overflow-hidden">
+    <!-- Faint background leaf on the right -->
+    <div class="position-absolute" style="right: 1%; bottom: 1%; opacity: 0.15; z-index: -1; pointer-events: none;">
+      <img src="homeImage/leaves-free-img.png" alt="Leaves Background" style="width: 450px;">
+    </div>
+    
+    <div class="container-fluid py-4" style="margin-left: 6.5%; margin-right: 6.5%;">
+      <div class="row align-items-center">
+        
+        <!-- Left Box -->
+        <div class="col-12 col-lg-5 mb-5 mb-lg-0 pe-lg-5">
+          <div class="bg-cream rounded text-center pb-5 px-4 px-md-4 position-relative" style="margin-top: 50px;">
+            <img src="aboutImage/farming04-free-img-o9xdxvnzch1gu353cc71s2fv9hgs2o8e1ubsjmmia0.jpg"
+              alt="Organic Tomatoes" class="img-fluid rounded mb-3" style="margin-top: -50px; width: 100%; box-shadow: 0 10px 20px rgba(0,0,0,0.05);">
+            <div class="stars-rating mb-2 fs-4" style="color: #f5b000; letter-spacing: 2px;">★★★★★</div>
+            <p class="mb-4" style="font-size: 16px; color: #292929;">Click edit button to change this text. Lorem ipsum dolor sit amet,
+              consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
+            <div class="d-flex align-items-center justify-content-center gap-3">
+              <img src="homeImage/client02-free-img.png" alt="Mila Kunit" class="rounded-circle" style="width: 55px; height: 55px; object-fit: cover;">
+              <div class="text-dark" style="font-size: 16px;">Mila Kunit</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Box -->
+        <div class="col-12 col-lg-5 ms-lg-4 mb-lg-5 ps-lg-5 mt-3">
+          <div class="d-flex align-items-center gap-3 mb-4">
+            <img src="aboutImage/organic-badge-freeimg.png" alt="Certified Badge" style="width: 23%;">
+            <div>
+              <h3 class="fw-bold mb-3 brand-font" style="font-size: 24px;">Certified Products</h3>
+              <p class="text-muted fs-6 m-0" >Click edit button to change this text. Lorem ipsum<br>dolor sit amet</p>
+            </div>
+          </div>
+          
+          <h2 class="fw-bold pt-2 mb-3 brand-font" style="font-size: 34px; line-height: 1.3; color: #111;">We Deal With Various Quality<br>Organic Products!</h2>
+          
+          <img src="homeImage/logo-leaf-new.png" alt="Leaf" class="mb-4" style="width: 70px;">
+
+          <div class="row g-2 mb-5">
+            <div class="col-sm-6 d-flex align-items-center gap-2">
+              <i class="bi bi-check-circle text-organic fs-6"></i> 
+              <span style="font-size: 16px; color: #333;">Dry fruits</span>
+            </div>
+            <div class="col-sm-6 d-flex align-items-center gap-2">
+              <i class="bi bi-check-circle text-organic fs-6"></i> 
+              <span style="font-size: 16px; color: #333;">Milk products</span>
+            </div>
+            <div class="col-sm-6 d-flex align-items-center gap-2">
+              <i class="bi bi-check-circle text-organic fs-6"></i> 
+              <span style="font-size: 16px; color: #333;">Fresh vegetables</span>
+            </div>
+            <div class="col-sm-6 d-flex align-items-center gap-2">
+              <i class="bi bi-check-circle text-organic fs-6"></i> 
+              <span style="font-size: 16px; color: #333;">Organic honey</span>
+            </div>
+            <div class="col-sm-6 d-flex align-items-center gap-2">
+              <i class="bi bi-check-circle text-organic fs-6"></i> 
+              <span style="font-size: 16px; color: #333;">Dried vegetables</span>
+            </div>
+            <div class="col-sm-6 d-flex align-items-center gap-2">
+              <i class="bi bi-check-circle text-organic fs-6"></i> 
+              <span style="font-size: 16px; color: #333;">Organic tea</span>
+            </div>
+          </div>
+
+          <a href="#" class="btn btn-organic" style="width: 45%;">
+            <i class="bi bi-cart-fill me-2 fs-6"></i> START SHOPPING
+          </a>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+
+
+
+
+<!-- CERTIFIED PRODUCTS SECTION -->
+
+  <!-- <section class="py-5 my-4">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        Left Box
+        <div class="col-12 col-lg-5">
+          <div class="card border-0 bg-cream p-4 text-center rounded-3 shadow-sm">
+            <img src="aboutImage/farming04-free-img-o9xdxvnzch1gu353cc71s2fv9hgs2o8e1ubsjmmia0.jpg" alt="Organic Tomatoes" class="img-fluid rounded mb-3">
+            <div class="stars-rating mb-2">★★★★★</div>
+            <p class="text-muted small mb-2">Click edit button to change this text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
+            <div class="fw-bold fs-6">Mila Kunit</div>
+          </div>
+        </div>
+
+        Right Box
+        <div class="col-12 col-lg-7">
+          <div class="d-flex align-items-center gap-3 mb-3">
+            <img src="aboutImage/organic-badge-freeimg.png" alt="Certified Badge" style="width: 80px;">
+            <div>
+              <h4 class="h5 fw-bold mb-1">Certified Products</h4>
+              <p class="text-muted small m-0">Click edit button to change this text. Lorem ipsum dolor sit amet</p>
+            </div>
+          </div>
+          <h2 class="display-6 fw-bold mb-2">We Deal With Various Quality Organic Products!</h2>
+          <img src="homeImage/logo-leaf-new.png" alt="Leaf" class="leaf-flourish mb-4">
+          
+          <div class="row g-3 mb-4">
+            <div class="col-6"><i class="bi bi-check-circle-fill text-organic me-2"></i> <span class="fw-semibold">Dry fruits</span></div>
+            <div class="col-6"><i class="bi bi-check-circle-fill text-organic me-2"></i> <span class="fw-semibold">Milk products</span></div>
+            <div class="col-6"><i class="bi bi-check-circle-fill text-organic me-2"></i> <span class="fw-semibold">Fresh vegetables</span></div>
+            <div class="col-6"><i class="bi bi-check-circle-fill text-organic me-2"></i> <span class="fw-semibold">Organic honey</span></div>
+            <div class="col-6"><i class="bi bi-check-circle-fill text-organic me-2"></i> <span class="fw-semibold">Dried vegetables</span></div>
+            <div class="col-6"><i class="bi bi-check-circle-fill text-organic me-2"></i> <span class="fw-semibold">Organic tea</span></div>
+          </div>
+
+          <a href="everything.html" class="btn btn-organic">
+            <i class="bi bi-cart-fill"></i> START SHOPPING
+          </a>
+        </div>
+      </div>
+    </div>
+  </section> -->
+
+
+
+  <!-- FOOTER (Bootstrap Grid) -->
+  <footer class="bg-black text-white pt-5 pb-0">
+    <div class="container-fluid pb-5 my-3" style="padding-left: 5.5%; padding-right: 5.5%;">
+      <div class="row g-4 pb-4">
+        <div class="col-12 col-md-6 col-lg-3">
+          <img src="organicImage/organic-store-white-logo.png" alt="Organic Store" class="footer-logo mb-3 pt-1">
+          <p class="fst-italic fw-bold mt-4 mb-0" style="color: #f1f1f1; font-size: 17px; line-height: 1.6;">Maecenas mi justo,<br>interdum at consectetur<br>vel, tristique et arcu.</p>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3 footer-links pt-2">
+          <h4 class="text-white mb-3 mt-2 brand-font fs-4">Website</h4>
+          <a href="about.html">About</a>
+          <a href="everything.html">Everything</a>
+          <a href="groceries.html">Groceries</a>
+          <a href="juice.html">Juice</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3 footer-links pt-2">
+          <h4 class="text-white mb-3 mt-2 brand-font fs-4">Quick Links</h4>
+          <a href="about.html">Know More About Us</a>
+          <a href="everything.html">Visit Store</a>
+          <a href="contact.html">Let's Connect</a>
+          <a href="contact.html">Locate Stores</a>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3 footer-links pt-2">
+          <h4 class="text-white mb-3 mt-2 brand-font fs-4">Site Links</h4>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Shipping Details</a>
+          <a href="#">Offers Coupons</a>
+          <a href="#">Terms & Conditions</a>
+        </div>
+      </div>
+    </div>
+    <div class="border-top  py-4" style="border-color: #222222 !important;">
+      <div class="container-fluid d-flex flex-wrap align-items-center justify-content-between gap-2 text-secondary" style="font-size: 17px; padding-left: 5.5%; padding-right: 5.5%;">
+        <p class="m-2" style="color: #ffffff;">Copyright © 2026 | Organic Store</p>
+        <div class="d-flex gap-4 fs-6">
+          <a href="#" style="color: #ffffff;" aria-label="Yelp"><i class="bi bi-yelp"></i></a>
+          <a href="#" style="color: #ffffff;" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+          <a href="#" style="color: #ffffff;" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+          <a href="#" style="color: #ffffff;" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+
+  <!-- FLOATING CART BUTTON -->
+  <button class="floating-cart-btn trigger-cart-drawer" aria-label="View Cart">
+    <i class="bi bi-cart3 fs-4"></i>
+    <span class="floating-badge">0</span>
+  </button>
+
+   <!-- CART OVERLAY & DRAWER -->
+  <div class="cart-drawer-overlay" id="cartOverlay"></div>
+  <aside class="cart-drawer-box" id="cartDrawer" aria-label="Shopping Cart">
+    <div class="p-3 border-bottom d-flex align-items-center justify-content-between">
+      <h5 class="m-0 fs-6 fw-bold">Shopping Cart</h5>
+      <button class="btn btn-sm btn-link text-dark p-0" id="cartDrawerClose" aria-label="Close">
+        <i class="bi bi-x-lg fs-5"></i>
+      </button>
+    </div>
+    <div class="p-3 flex-grow-1 overflow-auto" id="cartDrawerBody">
+    </div>
+    <div class="p-3 border-top bg-light" id="cartDrawerFooter">
+      <div class="d-flex justify-content-between fw-bold mb-3">
+        <span>Subtotal:</span>
+        <span id="cartDrawerSubtotal">£0.00</span>
+      </div>
+       <div class="d-flex justify-content-between fw-bold mb-3">
+        <span>Total:</span>
+        <span id="cartDrawerTotal">£0.00</span>
+      </div>
+      <a href="cheakout.html" class="btn btn-organic w-100 text-center" onclick="closeCartDrawer()">Proceed to Checkout →</a>
+    </div>
+  </aside>
+
+  <!-- Bootstrap 5 JS & Custom Logic -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

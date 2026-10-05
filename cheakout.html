@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout - Organic Store</title>
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    .checkout-header {
+      border-bottom: 1px solid #eaeaea;
+      padding: 20px 0;
+    }
+    .checkout-form-label {
+      display: none; /* Hide labels as per image, uses placeholders mostly, except it actually uses placeholders as labels or no placeholders */
+    }
+    /* Look at image: the inputs don't have bold labels, they have placeholders or faint text. First name * */
+    .form-control, .form-select {
+      background-color: #fafafa;
+      border: 1px solid #e1e1e1;
+      padding: 12px 15px;
+      font-size: 14px;
+      border-radius: 3px;
+    }
+    .form-control:focus, .form-select:focus {
+      border-color: #8bc34a;
+      box-shadow: none;
+      background-color: #fff;
+    }
+    .checkout-section-title {
+      font-family: 'Merriweather', serif;
+      font-weight: 700;
+      font-size: 22px;
+      margin-bottom: 25px;
+      margin-top: 40px;
+      color: #333;
+    }
+    .order-summary-bg {
+      background-color: #f8f8f8;
+      min-height: 100vh;
+      padding: 40px;
+    }
+    
+    .checkout-payment-box {
+      border: 1px solid #e1e1e1;
+      border-radius: 4px;
+      overflow: hidden;
+      margin-bottom: 20px;
+    }
+    .payment-option {
+      padding: 15px 20px;
+      border-bottom: 1px solid #e1e1e1;
+    }
+    .payment-option:last-child {
+      border-bottom: none;
+    }
+    .payment-option.active {
+      border-top: 2px solid #8bc34a;
+      border-left: 2px solid #8bc34a;
+      border-right: 2px solid #8bc34a;
+      margin: -1px;
+      background-color: #fff;
+      position: relative;
+      z-index: 2;
+    }
+    .payment-desc {
+      background-color: #fbfbf9;
+      padding: 15px 20px;
+      font-size: 13px;
+      color: #666;
+      border-bottom: 1px solid #e1e1e1;
+    }
+    .btn-apply {
+      background-color: #8bc34a;
+      color: white;
+      border: none;
+      font-weight: 600;
+    }
+    .btn-apply:hover {
+      background-color: #7ab03c;
+      color: white;
+    }
+    
+    .checkout-item-badge {
+      position: absolute;
+      top: -8px;
+      right: -8px;
+      background-color: #8bc34a;
+      color: white;
+      border-radius: 50%;
+      width: 22px;
+      height: 22px;
+      font-size: 11px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="checkout-header bg-white">
+    <div class="container-fluid px-lg-5">
+      <a href="index.html"  style="padding-left: 5%;">
+        <img src="organicImage/organic-store-logo5.svg" alt="Organic Store" height="60">
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <div class="container-fluid" style="padding-left:5%;">
+      <form id="checkoutForm" class="row g-3">
+        
+        <!-- Left Column: Form -->
+        <div class="col-12 col-lg-6 px-4 px-lg-5 py-4 py-lg-5">
+          <div class="ms-lg-auto" style="max-width: 650px;">
+            
+            <h3 class="checkout-section-title mt-0">Contact</h3>
+            <div class="mb-4">
+              <input type="email" class="form-control" placeholder="Email Address" required>
+            </div>
+
+            <h3 class="checkout-section-title">Billing Details</h3>
+            <div class="row g-3 mb-3">
+              <div class="col-md-6">
+                <input type="text" class="form-control" placeholder="First name *" required>
+              </div>
+              <div class="col-md-6">
+                <input type="text" class="form-control" placeholder="Last name *" required>
+              </div>
+            </div>
+            
+            <div class="mb-3">
+              <select class="form-select text-muted">
+                <option value="India" selected>Country / Region</option>
+                <option value="India">India</option>
+              </select>
+            </div>
+            
+            <div class="mb-3">
+              <input type="text" class="form-control" placeholder="House number and street name *" required>
+            </div>
+            
+            <div class="mb-3">
+              <input type="text" class="form-control" placeholder="Apartment, suite, unit, etc. (optional)">
+            </div>
+            
+            <div class="row g-3 mb-3">
+              <div class="col-md-4">
+                <input type="text" class="form-control" placeholder="Town / City *" required>
+              </div>
+              <div class="col-md-4">
+                 <select class="form-select text-muted" required>
+                  <option value="" selected disabled>State *</option>
+                  <option value="Delhi">Delhi</option>
+                  <option value="Maharashtra">Maharashtra</option>
+                   <option value="MadhayaPradesh">Madhaya Pradesh</option>
+                </select>
+              </div>
+              <div class="col-md-4">
+                <input type="text" class="form-control" placeholder="Postcode / ZIP *" required>
+              </div>
+            </div>
+            
+            <div class="mb-4">
+              <input type="tel" class="form-control" placeholder="Phone *" required>
+            </div>
+            
+            <div class="form-check mb-4 mt-4">
+              <input class="form-check-input" type="checkbox" id="shipDifferent">
+              <label class="form-check-label fw-bold ms-1" for="shipDifferent" style="font-family: 'Merriweather', serif; color: #333;">
+                Ship to a different address?
+              </label>
+            </div>
+            
+            <div class="mb-4">
+              <textarea class="form-control" rows="3" placeholder="Notes about your order, e.g. special notes for delivery."></textarea>
+            </div>
+            
+            <h3 class="checkout-section-title">Shipping</h3>
+            <div class="alert bg-transparent text-danger p-3 mb-4" style="border: 1px solid #dc3545; border-radius: 0; font-size: 14px;">
+              Enter your address to view shipping options.
+            </div>
+            
+            <button class="btn w-100 bg-white mb-4 py-2" style="border: 1px solid #e1e1e1; color: #666; font-size: 14px;">View Available Coupons</button>
+            
+            <h3 class="checkout-section-title">Payment</h3>
+            
+            <div class="checkout-payment-box">
+              <div class="payment-option active d-flex align-items-center gap-2">
+                <input type="radio" name="paymentMethod" id="checkPayment" checked>
+                <label for="checkPayment" class="m-0 text-dark" style="font-size: 14px;">Check payments</label>
+              </div>
+              <div class="payment-desc">
+                Please send a check to Store Name, Store Street, Store Town, Store State / County, Store Postcode.
+              </div>
+              <div class="payment-option d-flex align-items-center gap-2 bg-white" style="border-top: 1px solid #e1e1e1;">
+                <input type="radio" name="paymentMethod" id="codPayment">
+                <label for="codPayment" class="m-0 text-muted" style="font-size: 14px;">Cash on delivery</label>
+              </div>
+            </div>
+            
+            <button type="submit" class="btn btn-organic w-100 fw-bold fs-6 py-3" style="border-radius: 3px;" id="placeOrderBtn">
+            <i class="bi bi-lock-fill"></i> Place Order <span id="checkoutSubmitTotal">£0.00</span>
+            </button>
+            
+          </div>
+        </div>
+        
+        <!-- Right Column: Order Summary -->
+        <div class="col-12 col-lg-6 order-summary-bg border-start">
+          <!-- <div class="me-lg-auto" style="max-width: 450px;" id="checkoutSummaryContainer"> -->
+        <div class="me-lg-auto sticky-top" style="max-width: 450px; top: 20px; z-index: 10;" id="checkoutSummaryContainer">
+
+            <!-- JS will inject items here -->
+          </div>
+        </div>
+        
+    </form>
+
+    </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+  <script>
+    // Checkout specific logic to render order summary
+    document.addEventListener('DOMContentLoaded', () => {
+      renderCheckoutSummary();
+    });
+
+    function renderCheckoutSummary() {
+      const summaryContainer = document.getElementById('checkoutSummaryContainer');
+      const submitTotal = document.getElementById('checkoutSubmitTotal');
+      
+      const total = getCartTotal().toFixed(2);
+      
+      if (submitTotal) submitTotal.textContent = `£${total}`;
+      
+      if (!summaryContainer) return;
+      
+      if (cart.length === 0) {
+        summaryContainer.innerHTML = '<p class="text-muted">Your cart is empty.</p><a href="everything.html" class="btn btn-organic">Return to shop</a>';
+        return;
+      }
+      
+      let itemsHTML = cart.map(item => `
+        <div class="d-flex align-items-center justify-content-between mb-3 pb-3 border-bottom border-light">
+          <div class="d-flex align-items-center gap-3">
+            <div class="position-relative" style="width: 70px; height: 70px; background: #e5e5e5; border-radius: 6px; ">
+              <img src="${item.img}" alt="${item.name}" class="img-fluid" style="mix-blend-mode: multiply;">
+              <span class="checkout-item-badge">${item.qty}</span>
+            </div>
+            <span class="text-dark" style="font-size: 14px;">${item.name}</span>
+          </div>
+          <span class="text-dark" style="font-size: 14px;">£${(item.price * item.qty).toFixed(2)}</span>
+        </div>
+      `).join('');
+      
+      const summaryHTML = `
+        ${itemsHTML}
+        
+        <div class="d-flex gap-2 my-4">
+          <input type="text" class="form-control" placeholder="Coupon Code" style="background: white;">
+          <button class="btn btn-apply px-4">Apply</button>
+        </div>
+        
+        <div class="d-flex justify-content-between mb-3 text-dark" style="font-size: 14px;">
+          <span>Subtotal</span>
+          <span>£${total}</span>
+        </div>
+        
+        <div class="d-flex justify-content-between mb-4 border-bottom pb-4" style="font-size: 14px;">
+          <span class="text-dark">Shipping</span>
+          <span class="text-danger text-end" style="font-size: 12px; max-width: 150px;">Enter your address to view shipping options.</span>
+        </div>
+        
+        <div class="d-flex justify-content-between fw-bold text-dark mb-4" style="font-size: 16px;">
+          <span>Total</span>
+          <span>£${total}</span>
+        </div>
+      `;
+      
+      summaryContainer.innerHTML = summaryHTML;
+    }
+    
+    // Update summary when cart changes
+    const originalUpdateCartUI = updateCartUI;
+    updateCartUI = function() {
+      originalUpdateCartUI();
+      renderCheckoutSummary();
+    };
+
+
+  // Place Order Logic
+     const checkoutForm = document.getElementById('checkoutForm');
+    if (checkoutForm) {
+      checkoutForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        if (cart.length === 0) {
+          showToast('Your cart is empty!');
+          return;
+        }
+        // Process successful order
+        showToast('Order placed successfully!');
+        
+        // Clear cart
+        cart = [];
+        saveCart();
+        
+        // Redirect to home page after a short delay
+        setTimeout(() => {
+          window.location.href = 'index.html';
+        }, 2000);
+      });
+    }
+
+
+  </script>
+</body>
+</html>

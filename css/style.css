@@ -1,0 +1,557 @@
+/* ==========================================================================
+   ORGANIC STORE - BOOTSTRAP 5 THEME OVERRIDES
+   Bootstrap handles layouts, grids, utilities, and responsiveness.
+   Custom CSS handles brand typography, exact colors, and special accents.
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,400&family=Open+Sans:wght@400;500;600;700&display=swap');
+
+:root {
+  --primary-green: #6a9739;
+  --primary-green-hover: #587f2e;
+      --dark: #111111;
+  --bg-cream: #f8f6f3;
+  --font-serif: 'Merriweather', Georgia, serif;
+  --font-sans: 'Open Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+body {
+  font-family: var(--font-sans);
+  color: #333333;
+  background-color: #ffffff;
+}
+
+h1, h2, h3, h4, .brand-font {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  color: var(--dark);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--primary-green);
+}
+
+/* --- Brand Green Button & Utilities --- */
+.btn-organic {
+  background-color: var(--primary-green);
+  color: #ffffff !important;
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  padding: 12px 26px;
+  border-radius: 4px;
+  border: none;
+  transition: all 0.25s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.btn-organic:hover {
+  background-color: var(--primary-green-hover);
+  color: #ffffff !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(106, 151, 57, 0.35);
+}
+
+.btn-outline-organic {
+  background-color: transparent;
+  color: var(--primary-green);
+  border: 1px solid var(--primary-green);
+  font-weight: 700;
+  font-size: 12px;
+  text-transform: uppercase;
+  padding: 8px 16px;
+  border-radius: 4px;
+  transition: all 0.25s ease;
+}
+
+.btn-outline-organic:hover {
+  background-color: var(--primary-green);
+  color: #ffffff;
+}
+
+.text-organic {
+  color: var(--primary-green) !important;
+}
+
+.bg-cream {
+  background-color: var(--bg-cream) !important;
+}
+
+.bg-dark-custom {
+  background-color: var(--dark) !important;
+}
+
+
+
+/* Sirf Navbar Links ke Hover effect ke liye Custom CSS */
+.custom-link {
+  position: relative;
+  right: 30px;
+  transition: color 0.3s ease;
+}
+
+.custom-link:hover,
+.custom-link.active {
+  color: #8bc34a !important; /* Aapka Primary Green Color */
+}
+
+
+
+
+
+
+/* --- Hero & Ornaments --- */
+/* .hero-section {
+  background-color: #fbfbf9;
+  padding: 120px 0 90px 12px;
+
+
+   background-image: url('../homeImage/leaves-free-img.png');
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  background-size: 27%;
+
+} */
+
+
+/* --- Hero & Ornaments --- */
+.hero-section {
+  background-color: #fbfbf9;
+  padding: 120px 0 90px 12px;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('../homeImage/leaves-free-img.png');
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  background-size: 27%;
+  z-index: -1;
+  opacity: 0.3;
+}
+
+
+
+.join-bala{
+   font-size: 51px;
+   line-height: 1.4;
+  }
+
+  .d-block{
+
+    font-size: 17px;
+  }
+
+
+
+
+.heading-leaf {
+  width: 75px;
+  height: 33px;
+  display: block;
+  margin: 0 auto;
+}
+
+.leaf-flourish {
+  height: 33px;
+  width: auto;
+}
+
+.btn-organic{
+  height: 50px;
+  width: 180px;
+  /* margin-bottom: 70px; */
+}
+
+.benefit-box {
+  background-color: #292929;
+  border-radius: 4px;
+  
+  /* Row ko disturb kiye bina box ko lamba karne ke liye padding ki jagah height de do */
+  height: 120px; 
+  
+  max-width: 280px; 
+  margin: 0 auto;
+}
+
+.benefit-icon {
+  /* Bade text ke sath match karne ke liye icon thoda bada kar diya */
+  font-size: 38px; 
+  color: #8bc34a; 
+}
+
+/* ////////Best Selling Product////////// */
+
+/* .img-fluid-h{
+
+  height: 100px;
+  width: auto;
+} */
+
+
+
+/* --- Product Cards --- */
+
+.product-card {
+  border: none;
+  /* background-color: #ffffff; */
+   background-color: transparent !important;
+  transition: transform 0.25s ease;
+  position: relative;
+  height: 100%;
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+}
+
+.product-img-wrap {
+  position: relative;
+  overflow: hidden;
+  /* background-color: #fafafa;
+  border-radius: 4px; */
+
+  background-color: #f8f8f8;
+  border-radius: 0;
+
+  aspect-ratio: 1 / 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.product-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.35s ease;
+}
+
+.product-card:hover .product-img-wrap img {
+  transform: scale(1.05);
+}
+
+.sale-pill {
+  position: absolute;
+
+  /* top: 10px;
+  right: 10px;
+  background-color: var(--primary-green);
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 700;
+  width: 42px;
+  height: 42px; */
+
+  top: 15px;
+  right: 15px;
+  background-color: #8bc34a;
+  color: #111;
+  font-size: 14px;
+  font-weight: 400;
+  width: 45px;
+  height: 45px;
+
+
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15); */
+  box-shadow: none;
+  z-index: 2;
+}
+
+/* --- Pagination Custom --- */
+.pagination {
+  gap: 8px;
+}
+.page-link {
+  color: #8bc34a !important;
+  border: 1px solid #8bc34a !important;
+  padding: 8px 16px;
+  background-color: transparent !important;
+  font-size: 16px;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+.page-link:hover {
+  background-color: #8bc34a !important;
+  color: #fff !important;
+}
+.page-item.active .page-link {
+  background-color: #8bc34a !important;
+  color: #fff !important;
+}
+
+
+
+
+
+
+.stars-rating {
+  color: #f5b000;
+  font-size: 14px;
+  letter-spacing: 2px;
+}
+
+/* --- Promo Category Cards --- */
+.promo-box {
+  background: #ffffff;
+  border-radius: 6px;
+  min-height: 380px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.promo-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08) !important;
+}
+
+.promo-box img {
+  max-height: 140px;
+  object-fit: contain;
+}
+
+/* --- Deal Card --- */
+
+.deal-bg-card {
+  background: linear-gradient(rgba(31, 25, 25, 0.65), rgba(31, 24, 24, 0.75)),
+              url('../homeImage/sydney-rae-668606-unsplash.jpg') center/cover;
+  color: #ffffff;
+  border-radius: 6px;
+  min-height: 340px;
+}
+
+.deal-bg-card:hover {
+  background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.75)),
+              url('../homeImage/sydney-rae-668606-unsplash.jpg') center/cover;
+}
+
+/* --- Brand Logos --- */
+.brand-logo-img {
+  height: 40px;
+ 
+}
+
+
+/* --- Footer --- */
+
+
+
+.footer-logo {
+  height: 80px;
+  width: auto;
+}
+
+.footer-links a {
+  color: #aaaaaa;
+  font-size: 17px;
+  display: block;
+}
+
+.footer-links a:hover {
+  color: #ffffff;
+}
+
+
+/* --- Accordion Custom --- */
+.accordion-button {
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: #ffffff;
+  font-size: 15px;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+.accordion-button:not(.collapsed) {
+  color: var(--primary-green);
+  background-color: #ffffff;
+  box-shadow: none;
+}
+
+.accordion-button:focus {
+  box-shadow: none;
+  border-color: rgba(106, 151, 57, 0.25);
+}
+
+.accordion-button::after {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23333'%3e%3cpath fill-rule='evenodd' d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+  transform: none;
+  width: 10px;
+  height: 10px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.accordion-button:not(.collapsed)::after {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23333'%3e%3cpath fill-rule='evenodd' d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+  transform: rotate(90deg);
+}
+
+/* --- Price Range Slider --- */
+.price-slider {
+  accent-color: var(--primary-green);
+}
+
+/* --- Floating Cart Button --- */
+.floating-cart-btn {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background-color: var(--primary-green);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  z-index: 9999;
+  border: none;
+  /* transition: transform 0.25s ease, background-color 0.25s ease; */
+    transition: transform 0.25s ease, background-color 0.25s ease, bottom 0.7s ease-in-out;
+
+}
+
+.floating-cart-btn:hover {
+  transform: scale(1.08);
+  background-color: var(--primary-green-hover);
+}
+
+.floating-badge {
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  background-color: #ffffff;
+  color: var(--primary-green);
+  font-size: 11px;
+  font-weight: 800;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--primary-green);
+}
+
+/* --- Slide-Out Cart Drawer --- */
+.cart-drawer-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 10000;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.cart-drawer-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.cart-drawer-box {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 420px;
+  max-width: 88vw;
+  height: 100vh;
+  background-color: #ffffff;
+  z-index: 10001;
+  box-shadow: -5px 0 30px rgba(0, 0, 0, 0.15);
+  transform: translateX(100%);
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  flex-direction: column;
+}
+
+.cart-drawer-box.active {
+  transform: translateX(0);
+}
+
+/* Toast */
+.site-toast {
+  position: fixed;
+  bottom: 25px;
+  left: 50%;
+  transform: translateX(-50%) translateY(100px);
+  background-color: #111111;
+  color: #ffffff;
+  padding: 12px 24px;
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: 600;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  z-index: 100000;
+  opacity: 0;
+  transition: all 0.35s ease;
+}
+
+.site-toast.show {
+  transform: translateX(-50%) translateY(0);
+  opacity: 1;
+}
+
+
+
+/* --- Safe Checkout --- */
+.safe-checkout-fieldset {
+  border: 1px solid #e1e1e1;
+  border-radius: 4px;
+    padding: 18px 15px 23px;
+    width: 100%;
+  margin: 1.5rem auto 0;
+  /* max-width: 550px; */
+  text-align: center;
+  background-color: cream;
+}
+.safe-checkout-legend {
+  font-size: 16px;
+  color: #333333;
+  font-weight: 600;
+  width: auto;
+  padding: 0 10px;
+  margin-bottom: 0;
+  float: none;
+  margin-left: auto;
+  margin-right: auto;
+}
+.safe-checkout-icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  align-items: center;
+}
+
+.safe-checkout-icons svg {
+  height: 30px;
+  width: auto;
+}
