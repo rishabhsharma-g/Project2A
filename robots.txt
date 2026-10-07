@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://rishabhsharma-g.github.io/Project2A/sitemap.xml
